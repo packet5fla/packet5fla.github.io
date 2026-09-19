@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春潮浪漫海棠红-古风诗词赏析与雅致生活指南</title>
+    <meta name="description" content="春潮浪漫海棠红，专注于古典诗词与东方美学。提供海棠花季赏花指南、古风诗词解读、雅致生活方式分享及文化雅集资讯。">
+    <meta name="keywords" content="春潮浪漫海棠红,海棠花,古风诗词,东方美学,赏花指南">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-red: #8B0000;
+            --primary-dark: #5a0000;
+            --secondary-gold: #D4AF37;
+            --bg-cream: #FDFBF7;
+            --text-dark: #2c2c2c;
+            --text-gray: #666;
+            --card-shadow: 0 4px 12px rgba(139, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Songti SC", "SimSun", "STSong", "Times New Roman", serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 3px solid var(--primary-red);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/haitang/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            letter-spacing: 5px;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--primary-red);
+            color: #fff;
+            border-radius: 2px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid var(--primary-red);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::before, .section-title h2::after {
+            content: '❖';
+            color: var(--secondary-gold);
+            margin: 0 15px;
+            font-size: 1.2rem;
+            vertical-align: middle;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            margin-top: 1rem;
+        }
+
+        /* Intro Section */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+            text-indent: 2em;
+            text-align: justify;
+        }
+
+        .intro-visual {
+            position: relative;
+        }
+
+        .intro-visual img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            filter: sepia(0.2);
+        }
+
+        .intro-visual::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--secondary-gold);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        /* Features */
+        .features {
+            background-color: #fff;
+            padding: 5rem 1.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border: 1px solid #eee;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+            border-color: var(--primary-red);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Poetry Section */
+        .poetry-section {
+            background: linear-gradient(to right, #fff5f5, #fff);
+        }
+
+        .poem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .poem-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .poem-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
+
+        .poem-author {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .poem-content {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: var(--text-dark);
+        }
+
+        /* Guide Section */
+        .guide-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .guide-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: rgba(139, 0, 0, 0.1);
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .guide-content h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-content p {
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-family: "Songti SC", serif;
+        }
+
+        .footer-links {
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-visual {
+                order: -1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                春潮浪漫海棠红
+                <span>· 东方雅集</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#poetry">诗词赏析</a></li>
+                    <li><a href="#guide">赏花指南</a></li>
+                    <li><a href="#culture">文化雅集</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>春潮浪漫海棠红</h1>
+                <p>于暮春时节，共赏那一抹醉人的嫣红，品味古典诗词中的东方浪漫。</p>
+                <a href="#poetry" class="btn">开始品读</a>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h3>何为“海棠春睡”</h3>
+                    <p>“春潮浪漫海棠红”不仅是一幅绚丽的自然画卷，更是中国传统文人心中最柔软的情愫。海棠花姿潇洒，花开似锦，自古以来便是雅俗共赏的名花。古人有“花中神仙”、“花贵妃”之称，苏轼更曾以此花喻美人，留下了“只恐夜深花睡去，故烧高烛照红妆”的千古绝唱。</p>
+                    <p>本站致力于为您梳理与海棠相关的古典诗词、传统赏花习俗以及与之相匹配的雅致生活方式，带您领略那份跨越千年的浪漫与温情。</p>
+                </div>
+                <div class="intro-visual">
+                    <img src="https://picsum.photos/seed/haitangflower/600/400" alt="盛开的海棠花">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="section-title">
+                <h2>核心栏目</h2>
+                <p>探索海棠文化的多元维度</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">❀</div>
+                    <h4>诗词赏析</h4>
+                    <p>收录历代咏海棠佳作，从苏东坡到陆游，深度解读诗句背后的意象与情感。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h4>赏花指南</h4>
+                    <p>提供最佳观赏地推荐、花期预报及摄影技巧，助您不负春光。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🍵</div>
+                    <h4>雅致生活</h4>
+                    <p>结合海棠元素，分享传统插花、茶道及春日宴饮的雅致生活方式。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📜</div>
+                    <h4>文化溯源</h4>
+                    <p>追溯海棠在中国文化史上的演变，解析其象征意义与民俗内涵。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Poetry Section -->
+        <section id="poetry" class="container poetry-section">
+            <div class="section-title">
+                <h2>海棠名篇</h2>
+                <p>穿越时空，聆听古人的咏叹</p>
+            </div>
+            <div class="poem-grid">
+                <article class="poem-card">
+                    <h3 class="poem-title">海棠</h3>
+                    <div class="poem-author">【宋】苏轼</div>
+                    <div class="poem-content">
+                        东风袅袅泛崇光，<br>
+                        香雾空蒙月转廊。<br>
+                        只恐夜深花睡去，<br>
+                        故烧高烛照红妆。
+                    </div>
+                </article>
+                <article class="poem-card">
+                    <h3 class="poem-title">海棠</h3>
+                    <div class="poem-author">【宋】陆游</div>
+                    <div class="poem-content">
+                        飞入寻常百姓家，<br>
+                        暗香浮动月黄昏。<br>
+                        庭院深深深几许，<br>
+                        杨柳堆烟，帘幕无重数。
+                    </div>
+                </article>
+                <article class="poem-card">
+                    <h3 class="poem-title">如梦令·昨夜雨疏风骤</h3>
+                    <div class="poem-author">【宋】李清照</div>
+                    <div class="poem-content">
+                        昨夜雨疏风骤，浓睡不消残酒。<br>
+                        试问卷帘人，却道海棠依旧。<br>
+                        知否，知否？应是绿肥红瘦。
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container">
+            <div class="section-title">
+                <h2>赏花指南</h2>
+                <p>如何度过一个浪漫的海棠季</p>
+            </div>
+            <div class="guide-list">
+                <div class="guide-item">
+                    <div class="guide-number">01</div>
+                    <div class="guide-content">
+                        <h4>把握最佳观赏期</h4>
+                        <p>海棠花期一般在3月至4月。不同品种（如西府海棠、贴梗海棠、木瓜海棠）开花时间略有差异，建议关注当地植物园或公园发布的最新花期预报。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">02</div>
+                    <div class="guide-content">
+                        <h4>选择合适的地点</h4>
+                        <p>推荐前往公园、古典园林或城市滨水区域。江南地区如苏州拙政园、杭州西湖是赏海棠的经典去处，而在北方，中山公园等地亦有规模不小的海棠花海。</p>
+                    </div>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-number">03</div>
+                    <div class="guide-content">
+                        <h4>摄影与记录</h4>
+                        <p>清晨是拍摄海棠的最佳时段，光线柔和且露水未干。建议使用大光圈镜头捕捉花瓣的细节，或利用古建筑作为前景，构图时注意留白，体现“春潮”的流动感。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">春潮浪漫海棠红</div>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">投稿指南</a>
+            <a href="#">版权声明</a>
+            <a href="#">联系合作</a>
+        </div>
+        <p class="copyright">© 2023 春潮浪漫海棠红 - 东方文化雅集网. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
