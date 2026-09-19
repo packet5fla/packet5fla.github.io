@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MetCN邓晶官网，专注于医学营养与临床营养咨询，提供个性化营养评估、疾病营养干预及健康生活方式指导，致力于科学营养与临床实践的完美结合。">
+    <meta name="keywords" content="metcn邓晶,医学营养,临床营养,营养咨询,营养干预,健康生活方式">
+    <title>MetCN邓晶-医学营养与临床健康咨询服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #f0f4f8;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fafafa;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--white);
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--accent-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-item:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-item:hover .service-img img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .service-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .learn-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .check-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dark);
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-gray);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color);">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                MetCN<span>邓晶</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#services">专业服务</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">预约咨询</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>科学营养，<br><span>重塑健康生活</span></h1>
+                <p>MetCN邓晶致力于提供专业的医学营养支持与个性化健康干预方案，通过科学的评估与指导，帮助您建立可持续的健康生活方式。</p>
+                <a href="#services" class="cta-button">探索服务</a>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder image representing health consultation -->
+                <img src="https://picsum.photos/seed/health/600/400.jpg" alt="MetCN邓晶营养咨询场景" width="600" height="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2>核心价值</h2>
+                <p>为什么选择 MetCN 邓晶进行营养咨询？</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>医学营养评估</h3>
+                    <p>基于循证医学数据，结合个体代谢特征，提供精准的营养状况分析与风险评估。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🥗</div>
+                    <h3>个性化干预方案</h3>
+                    <p>拒绝千篇一律，量身定制饮食计划与运动建议，确保方案的科学性与可执行性。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>全程跟踪指导</h3>
+                    <p>建立长期的健康管理档案，提供阶段性反馈与调整，陪伴您完成健康蜕变。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-section">
+            <div class="about-img">
+                <img src="https://picsum.photos/seed/nutritionist/600/500.jpg" alt="MetCN邓晶团队" width="600" height="500">
+            </div>
+            <div class="about-text">
+                <h2>关于 MetCN 邓晶</h2>
+                <p>MetCN 是一个专注于临床营养与健康管理的专业平台。我们相信，营养是健康的基石。通过整合前沿的营养科学知识与临床实践经验，我们旨在打破传统饮食观念的壁垒，为每一位来访者提供切实可行的健康解决方案。</p>
+                <p>我们的服务涵盖了从慢性病管理、体重控制到术后康复、特殊人群营养支持等多个领域，帮助您在复杂的健康信息中找到正确的方向。</p>
+                <ul class="check-list">
+                    <li>循证医学为依据</li>
+                    <li>个性化定制服务</li>
+                    <li>注重长期行为改变</li>
+                    <li>提供全方位健康档案</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>专业服务领域</h2>
+                <p>针对不同健康需求，提供全方位的营养支持</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-item">
+                    <div class="service-img">
+                        <img src="https://picsum.photos/seed/diet/400/250.jpg" alt="体重管理服务">
+                    </div>
+                    <div class="service-content">
+                        <span class="service-tag">生活方式</span>
+                        <h3>体重管理与塑形</h3>
+                        <p>针对超重、肥胖及体型管理需求，通过代谢检测与饮食结构优化，实现健康减重，避免反弹。</p>
+                        <a href="#" class="learn-more">了解详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="service-item">
+                    <div class="service-img">
+                        <img src="https://picsum.photos/seed/disease/400/250.jpg" alt="慢性病营养干预">
+                    </div>
+                    <div class="service-content">
+                        <span class="service-tag">临床支持</span>
+                        <h3>慢性病营养干预</h3>
+                        <p>针对糖尿病、高血压、高血脂等慢性疾病，提供专业的饮食处方与生活方式指导，辅助临床治疗。</p>
+                        <a href="#" class="learn-more">了解详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="service-item">
+                    <div class="service-img">
+                        <img src="https://picsum.photos/seed/special/400/250.jpg" alt="特殊人群营养">
+                    </div>
+                    <div class="service-content">
+                        <span class="service-tag">特殊人群</span>
+                        <h3>孕产与术后营养</h3>
+                        <p>为孕产妇、术后康复患者及特殊生理时期人群提供精准的营养支持，促进身体机能恢复。</p>
+                        <a href="#" class="learn-more">了解详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>关于营养咨询的常见疑问与解答</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">营养咨询和普通饮食建议有什么区别？</div>
+                    <div class="faq-answer">
+                        <p>营养咨询是基于医学营养学原理的深度服务。它不仅关注“吃什么”，更关注“为什么吃”以及“如何吃”。我们会结合您的体检报告、生活习惯和生理指标，制定个性化的干预方案，而非简单的食谱推荐。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">咨询需要提前准备什么？</div>
+                    <div class="faq-answer">
+                        <p>建议您在咨询前整理好近期的体检报告（如血常规、肝肾功能、血糖血脂等），并记录下近期的饮食日记和身体感受。这些信息能帮助顾问更准确地评估您的状况。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">咨询是线上的还是线下的？</div>
+                    <div class="faq-answer">
+                        <p>MetCN 邓晶提供灵活的咨询方式。您可以选择线下的面对面咨询，也可以选择线上视频咨询。具体的咨询形式可根据您的需求和便利性进行安排。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>MetCN 邓晶</h3>
+                    <p>专注于医学营养与临床健康咨询，用科学守护您的健康生活。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#services">服务项目</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务领域</h4>
+                    <ul>
+                        <li><a href="#">体重管理</a></li>
+                        <li><a href="#">慢性病营养</a></li>
+                        <li><a href="#">孕产营养</a></li>
+                        <li><a href="#">术后康复</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>邮箱: contact@metcn.com</li>
+                        <li>电话: 400-123-4567</li>
+                        <li>地址: 健康科技园A座</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MetCN 邓晶. 保留所有权利. 本网站内容仅供参考，不构成医疗建议。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
