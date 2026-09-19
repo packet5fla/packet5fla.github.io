@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都-城市旅游与生活指南门户</title>
+    <meta name="description" content="花都旅游攻略、景点推荐、美食地图及本地生活服务资讯。探索花都历史与现代交融的独特魅力，获取实用旅游指南与出行建议。">
+    <meta name="keywords" content="花都, 花都旅游, 花都攻略, 广州花都, 花都美食, 从化温泉, 花都景点">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/huadu_city/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            outline: none;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        /* Section Styles */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 180px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+        }
+
+        .hot-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            align-items: baseline;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hot-index {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .hot-list a {
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(230, 126, 34, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Info List */
+        .info-list {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .info-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            gap: 20px;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-date {
+            background-color: var(--bg-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-align: center;
+            min-width: 60px;
+        }
+
+        .info-date .day {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .info-date .month {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .info-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>花</span>都指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#scenery">旅游景点</a></li>
+                    <li><a href="#food">美食地图</a></li>
+                    <li><a href="#guide">旅游攻略</a></li>
+                    <li><a href="#local">本地生活</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn">发布攻略</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>发现花都之美</h1>
+            <p>探索这座历史文化名城与现代时尚之都的完美融合，获取最实用的花都旅游指南。</p>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索景点、美食或攻略...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-layout">
+        <!-- Main Content Area -->
+        <main>
+            <!-- Features -->
+            <section class="features">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏞️</div>
+                        <h3>生态旅游</h3>
+                        <p>万亩森林公园，天然氧吧</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏯</div>
+                        <h3>古村探秘</h3>
+                        <p>千年古村落，岭南建筑瑰宝</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🍜</div>
+                        <h3>地道美食</h3>
+                        <p>传统烧鹅，客家风味</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚄</div>
+                        <h3>交通枢纽</h3>
+                        <p>高铁直达，出行无忧</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Spots -->
+            <section id="scenery">
+                <div class="section-title">
+                    <h2>热门景点推荐</h2>
+                    <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">查看全部 &gt;</a>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-img" style="background-image: url('https://picsum.photos/seed/park/400/300');"></div>
+                        <div class="card-body">
+                            <h3 class="card-title">王子山森林公园</h3>
+                            <p class="card-desc">广州北部的绿色明珠，拥有壮观的瀑布群和原始次生林，是徒步和露营的理想之地。</p>
+                            <div class="card-meta">
+                                <span>距市中心 40km</span>
+                                <span>⭐ 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img" style="background-image: url('https://picsum.photos/seed/temple/400/300');"></div>
+                        <div class="card-body">
+                            <h3 class="card-title">圆玄道观</h3>
+                            <p class="card-desc">依山而建的宏伟道观，气势恢宏，香火鼎盛，登顶可俯瞰花都全貌。</p>
+                            <div class="card-meta">
+                                <span>距市中心 15km</span>
+                                <span>⭐ 4.5</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-img" style="background-image: url('https://picsum.photos/seed/river/400/300');"></div>
+                        <div class="card-body">
+                            <h3 class="card-title">花都湖国家湿地公园</h3>
+                            <p class="card-desc">城市中的绿肺，水清岸绿，设有完善的步道和观鸟台，适合亲子游。</p>
+                            <div class="card-meta">
+                                <span>距市中心 5km</span>
+                                <span>⭐ 4.6</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Local News -->
+            <section id="local" style="margin-top: 40px;">
+                <div class="section-title">
+                    <h2>花都动态</h2>
+                </div>
+                <div class="info-list">
+                    <div class="info-item">
+                        <div class="info-date">
+                            <span class="day">12</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="info-content">
+                            <h3><a href="#">2023年花都文化旅游节即将开幕</a></h3>
+                            <p>本次文化节将汇聚本地特色美食、民俗表演及手工艺品展览，为期一个月。</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-date">
+                            <span class="day">08</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="info-content">
+                            <h3><a href="#">花都机场第三跑道扩建工程进展顺利</a></h3>
+                            <p>预计2024年完工，将进一步提升花都作为空铁联运枢纽的吞吐能力。</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-date">
+                            <span class="day">01</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="info-content">
+                            <h3><a href="#">新增三条公交线路连接地铁9号线</a></h3>
+                            <p>为方便市民出行，缓解早晚高峰拥堵，市交通局发布最新公交线路调整通知。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="widget-title">本周热门</h3>
+                <ul class="hot-list">
+                    <li>
+                        <span class="hot-index">1</span>
+                        <a href="#">花都半日游最佳路线规划</a>
+                    </li>
+                    <li>
+                        <span class="hot-index">2</span>
+                        <a href="#">必吃的五家老字号烧鹅店</a>
+                    </li>
+                    <li>
+                        <span class="hot-index">3</span>
+                        <a href="#">周末露营好去处推荐</a>
+                    </li>
+                    <li>
+                        <span class="hot-index">4</span>
+                        <a href="#">花都拍照打卡圣地指南</a>
+                    </li>
+                    <li>
+                        <span class="hot-index">5</span>
+                        <a href="#">从化温泉自驾游攻略</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">实用信息</h3>
+                <ul class="hot-list">
+                    <li>
+                        <a href="#">花都区交通管制通知</a>
+                    </li>
+                    <li>
+                        <a href="#">旅游投诉与救援电话</a>
+                    </li>
+                    <li>
+                        <a href="#">花都特产购物指南</a>
+                    </li>
+                    <li>
+                        <a href="#">周末去哪儿玩？</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget" style="background-color: #fff3e0; border: 1px solid #ffe0b2;">
+                <h3 class="widget-title" style="color: #e65100;">旅游小贴士</h3>
+                <p style="font-size: 0.9rem; color: #5d4037;">
+                    花都气候温暖湿润，建议携带防晒用品。游览古村落时请爱护文物，勿随意刻画。
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于花都指南</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        花都指南致力于为游客和本地居民提供最全面、最及时的花都旅游资讯、生活服务及攻略指南。我们专注于挖掘城市深度玩法，让每一次出行都充满惊喜。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">景点介绍</a></li>
+                        <li><a href="#">美食推荐</a></li>
+                        <li><a href="#">交通指南</a></li>
+                        <li><a href="#">酒店住宿</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书官方号</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 花都指南 版权所有 | 本站信息仅供参考，请以官方发布为准</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
