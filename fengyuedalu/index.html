@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风月大陆完整版-玄幻奇幻小说连载与全集阅读</title>
+    <meta name="description" content="风月大陆完整版为您提供高质量玄幻奇幻小说风月大陆的在线阅读服务，包含最新章节更新、全文阅读、角色介绍及剧情解析。">
+    <meta name="keywords" content="风月大陆完整版,风月大陆小说,玄幻小说,在线阅读,小说推荐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-body: #f4f4f9;
+            --bg-card: #ffffff;
+            --text-main: #2c3e50;
+            --text-sub: #7f8c8d;
+            --accent-color: #8e44ad;
+            --accent-hover: #9b59b6;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 5px rgba(0,0,0,0.05);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section Styles */
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title h2 {
+            font-size: 20px;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .more-link {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        .more-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Book Card Grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(142, 68, 173, 0.2);
+        }
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+
+        .book-info {
+            padding: 12px;
+        }
+
+        .book-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .book-author {
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+        }
+
+        .book-tags {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 2px 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            color: #666;
+        }
+
+        .tag.hot {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        /* Latest Chapters List */
+        .chapter-list {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 14px;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            color: var(--text-main);
+            flex: 1;
+            margin-right: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chapter-date {
+            color: var(--text-sub);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        /* Sidebar Widget */
+        .sidebar-widget {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ranking-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .ranking-num {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .ranking-num.top-1 { background: #ff4757; color: white; }
+        .ranking-num.top-2 { background: #ffa502; color: white; }
+        .ranking-num.top-3 { background: #2ed573; color: white; }
+        .ranking-num.other { background: #eee; color: #666; }
+
+        .ranking-name {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Book Detail Area */
+        .book-detail {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+
+        .detail-header {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .detail-cover {
+            width: 180px;
+            height: 260px;
+            flex-shrink: 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .detail-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .detail-info h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .detail-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-sub);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .detail-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .detail-desc {
+            margin-top: 20px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .detail-actions {
+                justify-content: center;
+            }
+
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <span>风月大陆完整版</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">书架</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">注册</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">玄幻 · 冒险 · 东方幻想</span>
+            <h1>风月大陆完整版</h1>
+            <p>踏入神秘的东方玄幻世界，见证少年逆天改命的传奇历程。这里有最宏大的世界观，最细腻的情感描写，以及最热血的战斗场面。</p>
+            <div class="detail-actions" style="justify-content: center;">
+                <a href="#read" class="btn btn-primary" style="padding: 12px 35px; font-size: 16px;">开始阅读</a>
+                <a href="#" class="btn btn-outline" style="padding: 12px 35px; font-size: 16px;">加入书架</a>
+            </div>
+            <div class="hero-meta">
+                <span>作者：云游书生</span>
+                <span>状态：连载中</span>
+                <span>字数：156万字</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main-layout">
+        <!-- Left Column: Content -->
+        <div class="content-column">
+            
+            <!-- Book Detail -->
+            <article class="book-detail" id="read">
+                <div class="detail-header">
+                    <div class="detail-cover">
+                        <img src="https://picsum.photos/seed/fengyue/300/450" alt="风月大陆封面">
+                    </div>
+                    <div class="detail-info">
+                        <h1>风月大陆</h1>
+                        <div class="detail-meta">
+                            <span>类型：玄幻</span>
+                            <span>标签：热血、升级、群像</span>
+                            <span>更新：2023-10-24</span>
+                        </div>
+                        <p style="color: #666; margin-bottom: 20px;">
+                            传说中，风月大陆孕育着无尽的灵气与机缘。这里是强者的乐园，也是弱者的修罗场。主角林风意外穿越至此，从一个籍籍无名的少年，逐步揭开大陆背后的惊天秘密。在这个充满魔法与斗气的世界里，他将如何一步步踏上巅峰？
+                        </p>
+                        <div class="detail-actions">
+                            <a href="#" class="btn btn-primary">立即阅读</a>
+                            <a href="#" class="btn btn-outline">分享本书</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-desc">
+                    <p><strong>剧情简介：</strong></p>
+                    <p>风月大陆，万族林立，强者可摘星拿月。林风本是地球的一名普通青年，因意外坠崖穿越至风月大陆。在这里，他发现自己拥有一种罕见的“灵体”天赋，能够吞噬万物之气。为了寻找回家的路，也为了守护身边珍视的人，林风踏上了逆天征途。他先后加入各大宗门，经历爱恨情仇，最终发现风月大陆的毁灭危机，并肩负起拯救苍生的重任。</p>
+                </div>
+            </article>
+
+            <!-- Latest Chapters -->
+            <section>
+                <div class="section-title">
+                    <h2>最新章节</h2>
+                    <a href="#" class="more-link">查看全部 &gt;</a>
+                </div>
+                <div class="chapter-list">
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1256章 剑指苍穹</a>
+                        <span class="chapter-date">10-24</span>
+                    </div>
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1255章 最后一战</a>
+                        <span class="chapter-date">10-23</span>
+                    </div>
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1254章 魔王降临</a>
+                        <span class="chapter-date">10-22</span>
+                    </div>
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1253章 生死时速</a>
+                        <span class="chapter-date">10-21</span>
+                    </div>
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1252章 惊天逆转</a>
+                        <span class="chapter-date">10-20</span>
+                    </div>
+                    <div class="chapter-item">
+                        <a href="#" class="chapter-title">第1251章 深渊凝视</a>
+                        <span class="chapter-date">10-19</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations -->
+            <section style="margin-top: 40px;">
+                <div class="section-title">
+                    <h2>同作者推荐</h2>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book1/200/300" alt="书籍封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">九天神龙诀</h3>
+                            <p class="book-author">云游书生</p>
+                            <div class="book-tags">
+                                <span class="tag">玄幻</span>
+                                <span class="tag">热血</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book2/200/300" alt="书籍封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">星辰变外传</h3>
+                            <p class="book-author">云游书生</p>
+                            <div class="book-tags">
+                                <span class="tag">科幻</span>
+                                <span class="tag">冒险</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book3/200/300" alt="书籍封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">剑道独尊</h3>
+                            <p class="book-author">云游书生</p>
+                            <div class="book-tags">
+                                <span class="tag">武侠</span>
+                                <span class="tag">仙侠</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/book4/200/300" alt="书籍封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">不朽凡人</h3>
+                            <p class="book-author">云游书生</p>
+                            <div class="book-tags">
+                                <span class="tag">都市</span>
+                                <span class="tag">修仙</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar-column">
+            
+            <!-- Ranking -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">本周热门</h3>
+                <ul class="ranking-list">
+                    <li>
+                        <span class="ranking-num top-1">1</span>
+                        <span class="ranking-name">神级败家子</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num top-2">2</span>
+                        <span class="ranking-name">龙王殿</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num top-3">3</span>
+                        <span class="ranking-name">都市极品医仙</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num other">4</span>
+                        <span class="ranking-name">绝世武神</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num other">5</span>
+                        <span class="ranking-name">完美世界</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num other">6</span>
+                        <span class="ranking-name">武动乾坤</span>
+                    </li>
+                    <li>
+                        <span class="ranking-num other">7</span>
+                        <span class="ranking-name">大主宰</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">分类浏览</h3>
+                <ul style="font-size: 14px; color: var(--text-main);">
+                    <li style="margin-bottom: 8px;"><a href="#">玄幻奇幻</a> <span style="float: right; color: #999;">1280</span></li>
+                    <li style="margin-bottom: 8px;"><a href="#">武侠仙侠</a> <span style="float: right; color: #999;">950</span></li>
+                    <li style="margin-bottom: 8px;"><a href="#">都市异能</a> <span style="float: right; color: #999;">820</span></li>
+                    <li style="margin-bottom: 8px;"><a href="#">历史军事</a> <span style="float: right; color: #999;">640</span></li>
+                    <li style="margin-bottom: 8px;"><a href="#">科幻末世</a> <span style="float: right; color: #999;">510</span></li>
+                    <li style="margin-bottom: 8px;"><a href="#">同人衍生</a> <span style="float: right; color: #999;">430</span></li>
+                </ul>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div style="background: #e0e0e0; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px; color: #999; font-size: 14px;">
+                广告位预留
+            </div>
+
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                        风月大陆完整版致力于为用户提供最优质的网络小说阅读体验。我们拥有海量的玄幻、武侠、都市类小说资源，更新迅速，分类清晰。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系方式</h3>
+                    <ul>
+                        <li>合作邮箱：contact@fengyuedalu.com</li>
+                        <li>客服QQ：12345678</li>
+                        <li>工作时间：9:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 风月大陆完整版 版权所有 | 仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                                        </html>
